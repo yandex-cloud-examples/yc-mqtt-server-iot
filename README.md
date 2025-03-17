@@ -2,7 +2,7 @@
 
 Чтобы подключиться к Yandex IoT Core с помощью библиотеки Paho на языке программирования С#, воспользуйтесь руководством [Работа с Yandex IoT Core на языке C#](https://yandex.cloud/ru/docs/iot-core/tutorials/c-sharp).
 
-[Сертификат удостоверяющего центра](https://storage.yandexcloud.net/mqtt/rootCA.crt) включен в пример в виде файла `rootCA.crt` на диске.
+[Сертификат удостоверяющего центра](https://storage.yandexcloud.net/mqtt/rootCA.crt) включен в пример в виде файла `rootCA.crt`.
 
 Для работы примера нужно создать [реестр](https://cloud.yandex.ru/docs/iot-core/quickstart#create-registry) и [устройство](https://cloud.yandex.ru/docs/iot-core/quickstart#create-device).
 
