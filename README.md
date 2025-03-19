@@ -6,5 +6,4 @@
 * Отправлять сообщения.
 * Подписывать устройство или реестр на получение сообщений.
 
-
-Чтобы подключиться к Yandex IoT Core с помощью библиотеки Paho на языке программирования С#, воспользуйтесь руководством [Работа с Yandex IoT Core на языке C#](https://yandex.cloud/ru/docs/iot-core/tutorials/c-sharp). Исходный код, который используется в руководстве, доступен в этом репозитории. Взаимодействие с Yandex IoT Core инкапсулировано в классе [YaClient](https://github.com/yandex-cloud-examples/yc-mqtt-server-iot/blob/main/YaClient.cs), который вы можете использовать в своих проектах.
+Чтобы подключиться к Yandex IoT Core и начать обмен сообщениями, воспользуйтесь руководством [Работа с Yandex IoT Core на языке C#](https://yandex.cloud/ru/docs/iot-core/tutorials/c-sharp). Исходный код, который используется в руководстве, доступен в этом репозитории. Взаимодействие с Yandex IoT Core инкапсулировано в классе [YaClient](https://github.com/yandex-cloud-examples/yc-mqtt-server-iot/blob/main/YaClient.cs), который вы можете использовать в своих проектах.
