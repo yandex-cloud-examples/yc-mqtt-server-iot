@@ -1,39 +1,10 @@
 # Пример работы с mqtt сервером с использованием библиотеки paho
 
-Чтобы подключиться к Yandex IoT Core с помощью библиотеки Paho на языке программирования С#, воспользуйтесь руководством [Работа с Yandex IoT Core на языке C#](https://yandex.cloud/ru/docs/iot-core/tutorials/c-sharp).
+В этом руководстве вы узнаете, как подключиться к [Yandex IoT Core](https://yandex.cloud/ru/docs/iot-core/) с помощью библиотеки [Paho](https://eclipse.dev/paho/clients/dotnet/) на языке программирования С#. Данный сценарий предполагает, что вы имеете навыки разработки с использованием платформы .NET на языке C#.
 
-[Сертификат удостоверяющего центра](https://storage.yandexcloud.net/mqtt/rootCA.crt) включен в пример в виде файла `rootCA.crt`.
-
-Для работы примера нужно создать [реестр](https://cloud.yandex.ru/docs/iot-core/quickstart#create-registry) и [устройство](https://cloud.yandex.ru/docs/iot-core/quickstart#create-device).
-
-Пример фактически делает эхо, то есть сообщение, посланное в `$devices/<ID_устройства>/events` возвращается клиенту посредством подписки на этот топик от имени реестра и выводится на консоль.
-
-Поддерживаются два способа [авторизации](https://cloud.yandex.ru/docs/iot-core/concepts/authorization), сертификаты или логин и пароль.
+После подключения вы сможете:
+* Отправлять сообщения.
+* Подписывать устройство или реестр на получение сообщений.
 
 
-## Сертификаты
-
-В примере используются два [сертификата](https://cloud.yandex.ru/docs/iot-core/quickstart#create-ca) — один для устройства, один для реестра.
-
-Чтобы из пары PEM файлов (сертификат и ключ) получить PKCS#12 сертификат в формате pfx, нужно воспользоваться утилитой [openssl](https://www.openssl.org/):
-
-```bash
-openssl pkcs12 -export -out cert.pfx -inkey key.pem -in cert.pem
-```
-
-Расположение на диске:
-
-```text
-certs structure:
-  /my_registry        Registry directory |currentDir|. Run samples from here.
-  `- reg.pfx
-  `- dev.pfx
-```
-Пример ищет сертификаты относительно текущей рабочей директории, **поэтому запускать их нужно в папке с сертификатами** (`my_registry` на схеме).
-
-
-## Логин и пароль
-
-Нужно сгенерировать пароль для [реестра](https://cloud.yandex.ru/docs/iot-core/operations/password/registry-password) и для [устройства](https://cloud.yandex.ru/docs/iot-core/operations/password/device-password).
-
-Логины реестра и устройства это их `ID`.
+Чтобы подключиться к Yandex IoT Core с помощью библиотеки Paho на языке программирования С#, воспользуйтесь руководством [Работа с Yandex IoT Core на языке C#](https://yandex.cloud/ru/docs/iot-core/tutorials/c-sharp). Исходный код, который используется в руководстве, доступен в этом репозитории. Взаимодействие с Yandex IoT Core инкапсулировано в классе [YaClient](https://github.com/yandex-cloud-examples/yc-mqtt-server-iot/blob/main/YaClient.cs), который вы можете использовать в своих проектах.
