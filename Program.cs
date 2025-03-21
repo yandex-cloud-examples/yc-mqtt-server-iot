@@ -5,18 +5,18 @@ namespace YandexIoTCoreExample
 {
   class Program
   {
-    private const string DeviceID = "<your device id>";
+    private const string DeviceID = "<your_device_ID>";
 
     private const bool useCerts = true; // change it if login-password authentication is used
 
     // used for certificate authentication
-    private const string RegistryCertFileName = "<your registry cert file name>";
-    private const string DeviceCertFileName = "<your device cert file name>";
+    private const string RegistryCertFileName = "<your_registry_cert_filename>";
+    private const string DeviceCertFileName = "<your_device_cert_filename>";
 
     // used for login-password authentication
-    private const string RegistryID = "<your registry id>";
-    private const string RegistryPassword = "<your registry password>";
-    private const string DevicePassword = "<your device password>";
+    private const string RegistryID = "<your_registry_ID>";
+    private const string RegistryPassword = "<your_registry_password>";
+    private const string DevicePassword = "<your_device_password>";
 
     private static ManualResetEvent oSubscibedData = new ManualResetEvent(false);
 
